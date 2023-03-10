@@ -1,0 +1,1103 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="..\packages\EntityFramework.6.4.4\build\EntityFramework.props" Condition="Exists('..\packages\EntityFramework.6.4.4\build\EntityFramework.props')" />
+  <Import Project="..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.1\build\net46\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props" Condition="Exists('..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.1\build\net46\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props')" />
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>
+    </ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{B98E1C98-EA73-4812-99C1-997F7D2D48CD}</ProjectGuid>
+    <ProjectTypeGuids>{349c5851-65df-11da-9384-00065b846f21};{fae04ec0-301f-11d3-bf4b-00c04f79efbc}</ProjectTypeGuids>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>obastidast</RootNamespace>
+    <AssemblyName>obastidast</AssemblyName>
+    <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
+    <MvcBuildViews>false</MvcBuildViews>
+    <UseIISExpress>true</UseIISExpress>
+    <Use64BitIISExpress />
+    <IISExpressSSLPort>44318</IISExpressSSLPort>
+    <IISExpressAnonymousAuthentication />
+    <IISExpressWindowsAuthentication />
+    <IISExpressUseClassicPipelineMode />
+    <UseGlobalApplicationHostFile />
+    <NuGetPackageImportStamp>
+    </NuGetPackageImportStamp>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="EntityFramework, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\packages\EntityFramework.6.4.4\lib\net45\EntityFramework.dll</HintPath>
+    </Reference>
+    <Reference Include="EntityFramework.SqlServer, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\packages\EntityFramework.6.4.4\lib\net45\EntityFramework.SqlServer.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.Security" />
+    <Reference Include="System.Web.DynamicData" />
+    <Reference Include="System.Web.Entity" />
+    <Reference Include="System.Web.ApplicationServices" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Web.Extensions" />
+    <Reference Include="System.Web.Abstractions" />
+    <Reference Include="System.Web.Routing" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Web.Services" />
+    <Reference Include="System.EnterpriseServices" />
+    <Reference Include="Microsoft.Web.Infrastructure, Version=1.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>..\packages\Microsoft.Web.Infrastructure.1.0.0.0\lib\net40\Microsoft.Web.Infrastructure.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Net.Http">
+    </Reference>
+    <Reference Include="System.Net.Http.WebRequest">
+    </Reference>
+    <Reference Include="System.Web.Helpers, Version=3.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>..\packages\Microsoft.AspNet.WebPages.3.2.7\lib\net45\System.Web.Helpers.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.Mvc, Version=5.2.7.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>..\packages\Microsoft.AspNet.Mvc.5.2.7\lib\net45\System.Web.Mvc.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.Optimization">
+      <HintPath>..\packages\Microsoft.AspNet.Web.Optimization.1.1.3\lib\net40\System.Web.Optimization.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.Razor, Version=3.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>..\packages\Microsoft.AspNet.Razor.3.2.7\lib\net45\System.Web.Razor.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.WebPages, Version=3.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>..\packages\Microsoft.AspNet.WebPages.3.2.7\lib\net45\System.Web.WebPages.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.WebPages.Deployment, Version=3.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>..\packages\Microsoft.AspNet.WebPages.3.2.7\lib\net45\System.Web.WebPages.Deployment.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.WebPages.Razor, Version=3.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>..\packages\Microsoft.AspNet.WebPages.3.2.7\lib\net45\System.Web.WebPages.Razor.dll</HintPath>
+    </Reference>
+    <Reference Include="Newtonsoft.Json">
+      <HintPath>..\packages\Newtonsoft.Json.12.0.2\lib\net45\Newtonsoft.Json.dll</HintPath>
+    </Reference>
+    <Reference Include="WebGrease">
+      <Private>True</Private>
+      <HintPath>..\packages\WebGrease.1.6.0\lib\WebGrease.dll</HintPath>
+    </Reference>
+    <Reference Include="Antlr3.Runtime">
+      <Private>True</Private>
+      <HintPath>..\packages\Antlr.3.5.0.2\lib\Antlr3.Runtime.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Reference Include="Microsoft.AspNet.Identity.Core">
+      <HintPath>..\packages\Microsoft.AspNet.Identity.Core.2.2.3\lib\net45\Microsoft.AspNet.Identity.Core.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.AspNet.Identity.Owin">
+      <HintPath>..\packages\Microsoft.AspNet.Identity.Owin.2.2.3\lib\net45\Microsoft.AspNet.Identity.Owin.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.AspNet.Identity.EntityFramework">
+      <HintPath>..\packages\Microsoft.AspNet.Identity.EntityFramework.2.2.3\lib\net45\Microsoft.AspNet.Identity.EntityFramework.dll</HintPath>
+    </Reference>
+    <Reference Include="Owin">
+      <HintPath>..\packages\Owin.1.0\lib\net40\Owin.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Owin">
+      <HintPath>..\packages\Microsoft.Owin.4.0.1\lib\net45\Microsoft.Owin.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Owin.Host.SystemWeb">
+      <HintPath>..\packages\Microsoft.Owin.Host.SystemWeb.4.0.1\lib\net45\Microsoft.Owin.Host.SystemWeb.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Owin.Security">
+      <HintPath>..\packages\Microsoft.Owin.Security.4.0.1\lib\net45\Microsoft.Owin.Security.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Owin.Security.Cookies">
+      <HintPath>..\packages\Microsoft.Owin.Security.Facebook.4.0.1\lib\net45\Microsoft.Owin.Security.Facebook.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Owin.Security.Cookies">
+      <HintPath>..\packages\Microsoft.Owin.Security.Cookies.4.0.1\lib\net45\Microsoft.Owin.Security.Cookies.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Owin.Security.Google">
+      <HintPath>..\packages\Microsoft.Owin.Security.Google.4.0.1\lib\net45\Microsoft.Owin.Security.Google.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Owin.Security.Twitter">
+      <HintPath>..\packages\Microsoft.Owin.Security.Twitter.4.0.1\lib\net45\Microsoft.Owin.Security.Twitter.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Owin.Security.MicrosoftAccount">
+      <HintPath>..\packages\Microsoft.Owin.Security.MicrosoftAccount.4.0.1\lib\net45\Microsoft.Owin.Security.MicrosoftAccount.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Owin.Security.OAuth">
+      <HintPath>..\packages\Microsoft.Owin.Security.OAuth.4.0.1\lib\net45\Microsoft.Owin.Security.OAuth.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.CodeDom.Providers.DotNetCompilerPlatform">
+      <HintPath>..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.1\lib\net45\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="App_Start\BundleConfig.cs" />
+    <Compile Include="App_Start\FilterConfig.cs" />
+    <Compile Include="App_Start\IdentityConfig.cs" />
+    <Compile Include="App_Start\RouteConfig.cs" />
+    <Compile Include="App_Start\Startup.Auth.cs" />
+    <Compile Include="Controllers\AccountController.cs" />
+    <Compile Include="Controllers\bancos\BCO_BANCOSController.cs" />
+    <Compile Include="Controllers\bancos\BCO_CODIGO_FINANCIEROController.cs" />
+    <Compile Include="Controllers\bancos\BCO_CUENTA_BANCOSController.cs" />
+    <Compile Include="Controllers\bancos\BCO_CUENTA_TIPOController.cs" />
+    <Compile Include="Controllers\compras\COM_CAB_DEVController.cs" />
+    <Compile Include="Controllers\compras\COM_CAB_ORDENController.cs" />
+    <Compile Include="Controllers\compras\COM_CATEGORIA_PROVEEDORESController.cs" />
+    <Compile Include="Controllers\compras\COM_DET_DEVController.cs" />
+    <Compile Include="Controllers\compras\COM_DET_ORDENController.cs" />
+    <Compile Include="Controllers\compras\COM_PROVEEDORController.cs" />
+    <Compile Include="Controllers\contabilidad\CON_CENTRO_COSTOSController.cs" />
+    <Compile Include="Controllers\contabilidad\CON_CENTRO_COSTOS_TIPOController.cs" />
+    <Compile Include="Controllers\contabilidad\CON_CUENTA_CLASEController.cs" />
+    <Compile Include="Controllers\contabilidad\CON_CUENTA_NIVELController.cs" />
+    <Compile Include="Controllers\contabilidad\CON_CUENTA_PLANController.cs" />
+    <Compile Include="Controllers\contabilidad\CON_CUENTA_TIPOController.cs" />
+    <Compile Include="Controllers\contabilidad\CON_DIARIO_AUXController.cs" />
+    <Compile Include="Controllers\contabilidad\CON_DIARIO_AUX_TIPOController.cs" />
+    <Compile Include="Controllers\contabilidad\CON_DIARIO_CABController.cs" />
+    <Compile Include="Controllers\contabilidad\CON_DIARIO_DETController.cs" />
+    <Compile Include="Controllers\contabilidad\CON_DIARIO_SECUENCIAController.cs" />
+    <Compile Include="Controllers\contabilidad\CON_DIARIO_TIPOController.cs" />
+    <Compile Include="Controllers\contabilidad\CON_ESTADO_CONTABController.cs" />
+    <Compile Include="Controllers\gen\GEN_ANIOController.cs" />
+    <Compile Include="Controllers\gen\GEN_MESController.cs" />
+    <Compile Include="Controllers\gen\GEN_PRM_DISCAPCIDA_TIPOController.cs" />
+    <Compile Include="Controllers\gen\GEN_PRM_EDUCACION_NIVELController.cs" />
+    <Compile Include="Controllers\gen\GEN_PRM_ESTADO_CIVLController.cs" />
+    <Compile Include="Controllers\gen\GEN_PRM_FORMA_PAGOController.cs" />
+    <Compile Include="Controllers\gen\GEN_PRM_GEOA_PAISESController.cs" />
+    <Compile Include="Controllers\gen\GEN_PRM_GEOE_PROVINCIASController.cs" />
+    <Compile Include="Controllers\gen\GEN_PRM_GEOI_CIUDADController.cs" />
+    <Compile Include="Controllers\gen\GEN_PRM_GEOO_PARROQUIASController.cs" />
+    <Compile Include="Controllers\gen\GEN_PRM_OPERADORA_MOVILController.cs" />
+    <Compile Include="Controllers\gen\GEN_PRM_PARENTESCOController.cs" />
+    <Compile Include="Controllers\gen\GEN_PRM_SEXOController.cs" />
+    <Compile Include="Controllers\gen\GEN_TIPO_IDENTIFICACIONController.cs" />
+    <Compile Include="Controllers\HomeController.cs" />
+    <Compile Include="Controllers\inventario\INV_ARTICULOSController.cs" />
+    <Compile Include="Controllers\inventario\INV_CAB_KARDEXController.cs" />
+    <Compile Include="Controllers\inventario\INV_CAB_MOVIMIENTOController.cs" />
+    <Compile Include="Controllers\inventario\INV_CAB_SOLICITUDController.cs" />
+    <Compile Include="Controllers\inventario\INV_CATEGORIAController.cs" />
+    <Compile Include="Controllers\inventario\INV_DET_KARDEXController.cs" />
+    <Compile Include="Controllers\inventario\INV_DET_MOVIMIENTOController.cs" />
+    <Compile Include="Controllers\inventario\INV_DET_SOLICITUDController.cs" />
+    <Compile Include="Controllers\inventario\INV_MARCAController.cs" />
+    <Compile Include="Controllers\inventario\INV_SUBTIPOController.cs" />
+    <Compile Include="Controllers\inventario\INV_TIPO_ARTICULOController.cs" />
+    <Compile Include="Controllers\inventario\INV_TIPSUBARTController.cs" />
+    <Compile Include="Controllers\ManageController.cs" />
+    <Compile Include="Controllers\nomina\NOM_EMPLEADOSController.cs" />
+    <Compile Include="Controllers\nomina\NOM_EMPLEADO_TIPOController.cs" />
+    <Compile Include="Controllers\nomina\NOM_VENDEDORESController.cs" />
+    <Compile Include="Controllers\nomina\NOM_VENDEDOR_TIPOController.cs" />
+    <Compile Include="Controllers\seguridad\SEG_APLICACIONController.cs" />
+    <Compile Include="Controllers\seguridad\SEG_BANCOController.cs" />
+    <Compile Include="Controllers\seguridad\SEG_BODEGAController.cs" />
+    <Compile Include="Controllers\seguridad\SEG_CAB_PURGAController.cs" />
+    <Compile Include="Controllers\seguridad\SEG_CENTRO_COSTOController.cs" />
+    <Compile Include="Controllers\seguridad\SEG_CIUDADController.cs" />
+    <Compile Include="Controllers\seguridad\SEG_CTA_BANCOController.cs" />
+    <Compile Include="Controllers\seguridad\SEG_DEPARTAMENTOController.cs" />
+    <Compile Include="Controllers\seguridad\SEG_DET_PURGAController.cs" />
+    <Compile Include="Controllers\seguridad\SEG_EMPRESAController.cs" />
+    <Compile Include="Controllers\seguridad\SEG_ENTIDADController.cs" />
+    <Compile Include="Controllers\seguridad\SEG_ENT_TIPController.cs" />
+    <Compile Include="Controllers\seguridad\SEG_ESTADO_AIController.cs" />
+    <Compile Include="Controllers\seguridad\SEG_GRUPOController.cs" />
+    <Compile Include="Controllers\seguridad\SEG_HISTORICOController.cs" />
+    <Compile Include="Controllers\seguridad\SEG_IMP_BENController.cs" />
+    <Compile Include="Controllers\seguridad\SEG_INICIOController.cs" />
+    <Compile Include="Controllers\seguridad\SEG_MENSAJEController.cs" />
+    <Compile Include="Controllers\seguridad\SEG_MENUController.cs" />
+    <Compile Include="Controllers\seguridad\SEG_NIVEL_PRECIOController.cs" />
+    <Compile Include="Controllers\seguridad\SEG_PAISController.cs" />
+    <Compile Include="Controllers\seguridad\SEG_PERFIL_EMPController.cs" />
+    <Compile Include="Controllers\seguridad\SEG_PER_CONController.cs" />
+    <Compile Include="Controllers\seguridad\SEG_PROVINCIAController.cs" />
+    <Compile Include="Controllers\seguridad\SEG_TIPOController.cs" />
+    <Compile Include="Controllers\seguridad\SEG_USU_GRUPOController.cs" />
+    <Compile Include="Controllers\seguridad\SEG_ZONAController.cs" />
+    <Compile Include="Database\BCO_BANCOS.cs">
+      <DependentUpon>MdEmpresa.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Database\BCO_CODIGO_FINANCIERO.cs">
+      <DependentUpon>MdEmpresa.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Database\BCO_CUENTA_BANCOS.cs">
+      <DependentUpon>MdEmpresa.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Database\BCO_CUENTA_TIPO.cs">
+      <DependentUpon>MdEmpresa.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Database\Clases_Tipos.cs">
+      <DependentUpon>MdEmpresa.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Database\COM_CAB_DEV.cs">
+      <DependentUpon>MdEmpresa.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Database\COM_CAB_ORDEN.cs">
+      <DependentUpon>MdEmpresa.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Database\COM_CATEGORIA_PROVEEDORES.cs">
+      <DependentUpon>MdEmpresa.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Database\COM_DET_DEV.cs">
+      <DependentUpon>MdEmpresa.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Database\COM_DET_ORDEN.cs">
+      <DependentUpon>MdEmpresa.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Database\COM_PROVEEDOR.cs">
+      <DependentUpon>MdEmpresa.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Database\CON_CENTRO_COSTOS.cs">
+      <DependentUpon>MdEmpresa.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Database\CON_CENTRO_COSTOS_TIPO.cs">
+      <DependentUpon>MdEmpresa.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Database\CON_CUENTA_CLASE.cs">
+      <DependentUpon>MdEmpresa.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Database\CON_CUENTA_NIVEL.cs">
+      <DependentUpon>MdEmpresa.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Database\CON_CUENTA_PLAN.cs">
+      <DependentUpon>MdEmpresa.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Database\CON_CUENTA_TIPO.cs">
+      <DependentUpon>MdEmpresa.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Database\CON_DIARIO_AUX.cs">
+      <DependentUpon>MdEmpresa.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Database\CON_DIARIO_AUX_TIPO.cs">
+      <DependentUpon>MdEmpresa.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Database\CON_DIARIO_CAB.cs">
+      <DependentUpon>MdEmpresa.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Database\CON_DIARIO_DET.cs">
+      <DependentUpon>MdEmpresa.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Database\CON_DIARIO_SECUENCIA.cs">
+      <DependentUpon>MdEmpresa.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Database\CON_DIARIO_TIPO.cs">
+      <DependentUpon>MdEmpresa.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Database\CON_ESTADO_CONTAB.cs">
+      <DependentUpon>MdEmpresa.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Database\GEN_ANIO.cs">
+      <DependentUpon>MdEmpresa.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Database\GEN_MES.cs">
+      <DependentUpon>MdEmpresa.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Database\GEN_PRM_DISCAPCIDA_TIPO.cs">
+      <DependentUpon>MdEmpresa.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Database\GEN_PRM_EDUCACION_NIVEL.cs">
+      <DependentUpon>MdEmpresa.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Database\GEN_PRM_ESTADO_CIVL.cs">
+      <DependentUpon>MdEmpresa.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Database\GEN_PRM_FORMA_PAGO.cs">
+      <DependentUpon>MdEmpresa.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Database\GEN_PRM_GEOA_PAISES.cs">
+      <DependentUpon>MdEmpresa.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Database\GEN_PRM_GEOE_PROVINCIAS.cs">
+      <DependentUpon>MdEmpresa.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Database\GEN_PRM_GEOI_CIUDAD.cs">
+      <DependentUpon>MdEmpresa.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Database\GEN_PRM_GEOO_PARROQUIAS.cs">
+      <DependentUpon>MdEmpresa.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Database\GEN_PRM_OPERADORA_MOVIL.cs">
+      <DependentUpon>MdEmpresa.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Database\GEN_PRM_PARENTESCO.cs">
+      <DependentUpon>MdEmpresa.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Database\GEN_PRM_SEXO.cs">
+      <DependentUpon>MdEmpresa.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Database\GEN_TIPO_IDENTIFICACION.cs">
+      <DependentUpon>MdEmpresa.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Database\INV_ARTICULOS.cs">
+      <DependentUpon>MdEmpresa.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Database\INV_CAB_KARDEX.cs">
+      <DependentUpon>MdEmpresa.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Database\INV_CAB_MOVIMIENTO.cs">
+      <DependentUpon>MdEmpresa.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Database\INV_CAB_SOLICITUD.cs">
+      <DependentUpon>MdEmpresa.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Database\INV_CATEGORIA.cs">
+      <DependentUpon>MdEmpresa.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Database\INV_DET_KARDEX.cs">
+      <DependentUpon>MdEmpresa.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Database\INV_DET_MOVIMIENTO.cs">
+      <DependentUpon>MdEmpresa.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Database\INV_DET_SOLICITUD.cs">
+      <DependentUpon>MdEmpresa.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Database\INV_MARCA.cs">
+      <DependentUpon>MdEmpresa.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Database\INV_SUBTIPO.cs">
+      <DependentUpon>MdEmpresa.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Database\INV_TIPO_ARTICULO.cs">
+      <DependentUpon>MdEmpresa.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Database\INV_TIPSUBART.cs">
+      <DependentUpon>MdEmpresa.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Database\MdEmpresa.Context.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>MdEmpresa.Context.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Database\MdEmpresa.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>MdEmpresa.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Database\MdEmpresa.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>MdEmpresa.edmx</DependentUpon>
+    </Compile>
+    <Compile Include="Database\NOM_EMPLEADOS.cs">
+      <DependentUpon>MdEmpresa.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Database\NOM_EMPLEADO_TIPO.cs">
+      <DependentUpon>MdEmpresa.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Database\NOM_VENDEDORES.cs">
+      <DependentUpon>MdEmpresa.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Database\NOM_VENDEDOR_TIPO.cs">
+      <DependentUpon>MdEmpresa.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Database\SEG_APLICACION.cs">
+      <DependentUpon>MdEmpresa.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Database\SEG_BANCO.cs">
+      <DependentUpon>MdEmpresa.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Database\SEG_BODEGA.cs">
+      <DependentUpon>MdEmpresa.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Database\SEG_CAB_PURGA.cs">
+      <DependentUpon>MdEmpresa.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Database\SEG_CENTRO_COSTO.cs">
+      <DependentUpon>MdEmpresa.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Database\SEG_CIUDAD.cs">
+      <DependentUpon>MdEmpresa.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Database\SEG_CTA_BANCO.cs">
+      <DependentUpon>MdEmpresa.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Database\SEG_DEPARTAMENTO.cs">
+      <DependentUpon>MdEmpresa.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Database\SEG_DET_PURGA.cs">
+      <DependentUpon>MdEmpresa.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Database\SEG_EMPRESA.cs">
+      <DependentUpon>MdEmpresa.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Database\SEG_ENTIDAD.cs">
+      <DependentUpon>MdEmpresa.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Database\SEG_ENT_TIP.cs">
+      <DependentUpon>MdEmpresa.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Database\SEG_ESTADO_AI.cs">
+      <DependentUpon>MdEmpresa.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Database\SEG_GRUPO.cs">
+      <DependentUpon>MdEmpresa.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Database\SEG_HISTORICO.cs">
+      <DependentUpon>MdEmpresa.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Database\SEG_IMP_BEN.cs">
+      <DependentUpon>MdEmpresa.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Database\SEG_INICIO.cs">
+      <DependentUpon>MdEmpresa.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Database\SEG_MENSAJE.cs">
+      <DependentUpon>MdEmpresa.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Database\SEG_MENU.cs">
+      <DependentUpon>MdEmpresa.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Database\SEG_NIVEL_PRECIO.cs">
+      <DependentUpon>MdEmpresa.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Database\SEG_PAIS.cs">
+      <DependentUpon>MdEmpresa.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Database\SEG_PERFIL_EMP.cs">
+      <DependentUpon>MdEmpresa.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Database\SEG_PER_CON.cs">
+      <DependentUpon>MdEmpresa.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Database\SEG_PROVINCIA.cs">
+      <DependentUpon>MdEmpresa.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Database\SEG_TIPO.cs">
+      <DependentUpon>MdEmpresa.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Database\SEG_USUARIO.cs">
+      <DependentUpon>MdEmpresa.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Database\SEG_USU_GRUPO.cs">
+      <DependentUpon>MdEmpresa.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Database\SEG_ZONA.cs">
+      <DependentUpon>MdEmpresa.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Database\sysdiagram.cs">
+      <DependentUpon>MdEmpresa.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Global.asax.cs">
+      <DependentUpon>Global.asax</DependentUpon>
+    </Compile>
+    <Compile Include="Models\AccountViewModels.cs" />
+    <Compile Include="Models\IdentityModels.cs" />
+    <Compile Include="Models\ManageViewModels.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Controllers\seguridad\SEG_USUARIOController.cs" />
+    <Compile Include="Startup.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Content\bootstrap-grid.css" />
+    <Content Include="Content\bootstrap-grid.min.css" />
+    <Content Include="Content\bootstrap-grid.rtl.css" />
+    <Content Include="Content\bootstrap-grid.rtl.min.css" />
+    <Content Include="Content\bootstrap-reboot.css" />
+    <Content Include="Content\bootstrap-reboot.min.css" />
+    <Content Include="Content\bootstrap-reboot.rtl.css" />
+    <Content Include="Content\bootstrap-reboot.rtl.min.css" />
+    <Content Include="Content\bootstrap-utilities.css" />
+    <Content Include="Content\bootstrap-utilities.min.css" />
+    <Content Include="Content\bootstrap-utilities.rtl.css" />
+    <Content Include="Content\bootstrap-utilities.rtl.min.css" />
+    <Content Include="Content\bootstrap.css" />
+    <Content Include="Content\bootstrap.min.css" />
+    <Content Include="Content\bootstrap.rtl.css" />
+    <Content Include="Content\bootstrap.rtl.min.css" />
+    <Content Include="Database\MdEmpresa.Context.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <DependentUpon>MdEmpresa.edmx</DependentUpon>
+      <LastGenOutput>MdEmpresa.Context.cs</LastGenOutput>
+    </Content>
+    <Content Include="Database\MdEmpresa.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <DependentUpon>MdEmpresa.edmx</DependentUpon>
+      <LastGenOutput>MdEmpresa.cs</LastGenOutput>
+    </Content>
+    <Content Include="favicon.ico" />
+    <Content Include="Global.asax" />
+    <Content Include="Content\Site.css" />
+    <EntityDeploy Include="Database\MdEmpresa.edmx">
+      <Generator>EntityModelCodeGenerator</Generator>
+      <LastGenOutput>MdEmpresa.Designer.cs</LastGenOutput>
+    </EntityDeploy>
+    <Content Include="Database\MdEmpresa.edmx.diagram">
+      <DependentUpon>MdEmpresa.edmx</DependentUpon>
+    </Content>
+    <Content Include="Scripts\bootstrap.bundle.js" />
+    <Content Include="Scripts\bootstrap.bundle.min.js" />
+    <Content Include="Scripts\bootstrap.esm.js" />
+    <Content Include="Scripts\bootstrap.esm.min.js" />
+    <Content Include="Scripts\bootstrap.js" />
+    <Content Include="Scripts\bootstrap.min.js" />
+    <Content Include="Scripts\bootstrap.min.js.map" />
+    <Content Include="Scripts\bootstrap.js.map" />
+    <Content Include="Scripts\bootstrap.esm.min.js.map" />
+    <Content Include="Scripts\bootstrap.esm.js.map" />
+    <Content Include="Scripts\bootstrap.bundle.min.js.map" />
+    <Content Include="Scripts\bootstrap.bundle.js.map" />
+    <Content Include="Content\bootstrap.rtl.min.css.map" />
+    <Content Include="Content\bootstrap.rtl.css.map" />
+    <Content Include="Content\bootstrap.min.css.map" />
+    <Content Include="Content\bootstrap.css.map" />
+    <Content Include="Content\bootstrap-utilities.rtl.min.css.map" />
+    <Content Include="Content\bootstrap-utilities.rtl.css.map" />
+    <Content Include="Content\bootstrap-utilities.min.css.map" />
+    <Content Include="Content\bootstrap-utilities.css.map" />
+    <Content Include="Content\bootstrap-reboot.rtl.min.css.map" />
+    <Content Include="Content\bootstrap-reboot.rtl.css.map" />
+    <Content Include="Content\bootstrap-reboot.min.css.map" />
+    <Content Include="Content\bootstrap-reboot.css.map" />
+    <Content Include="Content\bootstrap-grid.rtl.min.css.map" />
+    <Content Include="Content\bootstrap-grid.rtl.css.map" />
+    <Content Include="Content\bootstrap-grid.min.css.map" />
+    <Content Include="Content\bootstrap-grid.css.map" />
+    <None Include="Scripts\jquery-3.6.3.intellisense.js" />
+    <Content Include="Scripts\jquery-3.6.3.js" />
+    <Content Include="Scripts\jquery-3.6.3.min.js" />
+    <Content Include="Scripts\jquery-3.6.3.slim.js" />
+    <Content Include="Scripts\jquery-3.6.3.slim.min.js" />
+    <Content Include="Scripts\jquery-3.6.3.slim.min.map" />
+    <Content Include="Scripts\jquery-3.6.3.min.map" />
+    <None Include="Scripts\jquery.validate-vsdoc.js" />
+    <Content Include="Scripts\jquery.validate.js" />
+    <Content Include="Scripts\jquery.validate.min.js" />
+    <Content Include="Scripts\jquery.validate.unobtrusive.js" />
+    <Content Include="Scripts\jquery.validate.unobtrusive.min.js" />
+    <Content Include="Scripts\modernizr-2.8.3.js" />
+    <Content Include="Sources\Img\1.png" />
+    <Content Include="Sources\Img\user-interface.png" />
+    <Content Include="Web.config" />
+    <Content Include="Web.Debug.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </Content>
+    <Content Include="Web.Release.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </Content>
+    <Content Include="Views\Web.config" />
+    <Content Include="Views\_ViewStart.cshtml" />
+    <Content Include="Views\Shared\Error.cshtml" />
+    <Content Include="Views\Shared\_Layout.cshtml" />
+    <Content Include="Views\Home\About.cshtml" />
+    <Content Include="Views\Home\Contact.cshtml" />
+    <Content Include="Views\Home\Index.cshtml" />
+    <Content Include="Views\Account\_ExternalLoginsListPartial.cshtml" />
+    <Content Include="Views\Account\ConfirmEmail.cshtml" />
+    <Content Include="Views\Account\ExternalLoginConfirmation.cshtml" />
+    <Content Include="Views\Account\ExternalLoginFailure.cshtml" />
+    <Content Include="Views\Account\ForgotPassword.cshtml" />
+    <Content Include="Views\Account\ForgotPasswordConfirmation.cshtml" />
+    <Content Include="Views\Account\Login.cshtml" />
+    <Content Include="Views\Account\Register.cshtml" />
+    <Content Include="Views\Account\ResetPassword.cshtml" />
+    <Content Include="Views\Account\ResetPasswordConfirmation.cshtml" />
+    <Content Include="Views\Account\SendCode.cshtml" />
+    <Content Include="Views\Account\VerifyCode.cshtml" />
+    <Content Include="Views\Manage\AddPhoneNumber.cshtml" />
+    <Content Include="Views\Manage\ChangePassword.cshtml" />
+    <Content Include="Views\Manage\Index.cshtml" />
+    <Content Include="Views\Manage\ManageLogins.cshtml" />
+    <Content Include="Views\Manage\SetPassword.cshtml" />
+    <Content Include="Views\Manage\VerifyPhoneNumber.cshtml" />
+    <Content Include="Views\Shared\Lockout.cshtml" />
+    <Content Include="Views\Shared\_LoginPartial.cshtml" />
+    <Content Include="Views\Shared\_LayoutLogin.cshtml" />
+    <Content Include="Views\SEG_USUARIO\Create.cshtml" />
+    <Content Include="Views\SEG_USUARIO\Delete.cshtml" />
+    <Content Include="Views\SEG_USUARIO\Details.cshtml" />
+    <Content Include="Views\SEG_USUARIO\Edit.cshtml" />
+    <Content Include="Views\SEG_USUARIO\Index.cshtml" />
+    <Content Include="Views\SEG_EMPRESA\Create.cshtml" />
+    <Content Include="Views\SEG_EMPRESA\Delete.cshtml" />
+    <Content Include="Views\SEG_EMPRESA\Details.cshtml" />
+    <Content Include="Views\SEG_EMPRESA\Edit.cshtml" />
+    <Content Include="Views\SEG_EMPRESA\Index.cshtml" />
+    <Content Include="Views\SEG_ESTADO_AI\Create.cshtml" />
+    <Content Include="Views\SEG_ESTADO_AI\Delete.cshtml" />
+    <Content Include="Views\SEG_ESTADO_AI\Details.cshtml" />
+    <Content Include="Views\SEG_ESTADO_AI\Edit.cshtml" />
+    <Content Include="Views\SEG_ESTADO_AI\Index.cshtml" />
+    <Content Include="Views\SEG_APLICACION\Create.cshtml" />
+    <Content Include="Views\SEG_APLICACION\Delete.cshtml" />
+    <Content Include="Views\SEG_APLICACION\Details.cshtml" />
+    <Content Include="Views\SEG_APLICACION\Edit.cshtml" />
+    <Content Include="Views\SEG_APLICACION\Index.cshtml" />
+    <Content Include="Views\SEG_BANCO\Create.cshtml" />
+    <Content Include="Views\SEG_BANCO\Delete.cshtml" />
+    <Content Include="Views\SEG_BANCO\Details.cshtml" />
+    <Content Include="Views\SEG_BANCO\Edit.cshtml" />
+    <Content Include="Views\SEG_BANCO\Index.cshtml" />
+    <Content Include="Views\SEG_BODEGA\Create.cshtml" />
+    <Content Include="Views\SEG_BODEGA\Delete.cshtml" />
+    <Content Include="Views\SEG_BODEGA\Details.cshtml" />
+    <Content Include="Views\SEG_BODEGA\Edit.cshtml" />
+    <Content Include="Views\SEG_BODEGA\Index.cshtml" />
+    <Content Include="Views\SEG_CAB_PURGA\Create.cshtml" />
+    <Content Include="Views\SEG_CAB_PURGA\Delete.cshtml" />
+    <Content Include="Views\SEG_CAB_PURGA\Details.cshtml" />
+    <Content Include="Views\SEG_CAB_PURGA\Edit.cshtml" />
+    <Content Include="Views\SEG_CAB_PURGA\Index.cshtml" />
+    <Content Include="Views\SEG_CENTRO_COSTO\Create.cshtml" />
+    <Content Include="Views\SEG_CENTRO_COSTO\Delete.cshtml" />
+    <Content Include="Views\SEG_CENTRO_COSTO\Details.cshtml" />
+    <Content Include="Views\SEG_CENTRO_COSTO\Edit.cshtml" />
+    <Content Include="Views\SEG_CENTRO_COSTO\Index.cshtml" />
+    <Content Include="Views\SEG_CIUDAD\Create.cshtml" />
+    <Content Include="Views\SEG_CIUDAD\Delete.cshtml" />
+    <Content Include="Views\SEG_CIUDAD\Details.cshtml" />
+    <Content Include="Views\SEG_CIUDAD\Edit.cshtml" />
+    <Content Include="Views\SEG_CIUDAD\Index.cshtml" />
+    <Content Include="Views\SEG_CTA_BANCO\Create.cshtml" />
+    <Content Include="Views\SEG_CTA_BANCO\Delete.cshtml" />
+    <Content Include="Views\SEG_CTA_BANCO\Details.cshtml" />
+    <Content Include="Views\SEG_CTA_BANCO\Edit.cshtml" />
+    <Content Include="Views\SEG_CTA_BANCO\Index.cshtml" />
+    <Content Include="Views\SEG_DEPARTAMENTO\Create.cshtml" />
+    <Content Include="Views\SEG_DEPARTAMENTO\Delete.cshtml" />
+    <Content Include="Views\SEG_DEPARTAMENTO\Details.cshtml" />
+    <Content Include="Views\SEG_DEPARTAMENTO\Edit.cshtml" />
+    <Content Include="Views\SEG_DEPARTAMENTO\Index.cshtml" />
+    <Content Include="Views\SEG_DET_PURGA\Create.cshtml" />
+    <Content Include="Views\SEG_DET_PURGA\Delete.cshtml" />
+    <Content Include="Views\SEG_DET_PURGA\Details.cshtml" />
+    <Content Include="Views\SEG_DET_PURGA\Edit.cshtml" />
+    <Content Include="Views\SEG_DET_PURGA\Index.cshtml" />
+    <Content Include="Views\SEG_ENT_TIP\Create.cshtml" />
+    <Content Include="Views\SEG_ENT_TIP\Delete.cshtml" />
+    <Content Include="Views\SEG_ENT_TIP\Details.cshtml" />
+    <Content Include="Views\SEG_ENT_TIP\Edit.cshtml" />
+    <Content Include="Views\SEG_ENT_TIP\Index.cshtml" />
+    <Content Include="Views\SEG_ENTIDAD\Create.cshtml" />
+    <Content Include="Views\SEG_ENTIDAD\Delete.cshtml" />
+    <Content Include="Views\SEG_ENTIDAD\Details.cshtml" />
+    <Content Include="Views\SEG_ENTIDAD\Edit.cshtml" />
+    <Content Include="Views\SEG_ENTIDAD\Index.cshtml" />
+    <Content Include="Views\SEG_GRUPO\Create.cshtml" />
+    <Content Include="Views\SEG_GRUPO\Delete.cshtml" />
+    <Content Include="Views\SEG_GRUPO\Details.cshtml" />
+    <Content Include="Views\SEG_GRUPO\Edit.cshtml" />
+    <Content Include="Views\SEG_GRUPO\Index.cshtml" />
+    <Content Include="Views\SEG_HISTORICO\Create.cshtml" />
+    <Content Include="Views\SEG_HISTORICO\Delete.cshtml" />
+    <Content Include="Views\SEG_HISTORICO\Details.cshtml" />
+    <Content Include="Views\SEG_HISTORICO\Edit.cshtml" />
+    <Content Include="Views\SEG_HISTORICO\Index.cshtml" />
+    <Content Include="Views\SEG_IMP_BEN\Create.cshtml" />
+    <Content Include="Views\SEG_IMP_BEN\Delete.cshtml" />
+    <Content Include="Views\SEG_IMP_BEN\Details.cshtml" />
+    <Content Include="Views\SEG_IMP_BEN\Edit.cshtml" />
+    <Content Include="Views\SEG_IMP_BEN\Index.cshtml" />
+    <Content Include="Views\SEG_INICIO\Create.cshtml" />
+    <Content Include="Views\SEG_INICIO\Delete.cshtml" />
+    <Content Include="Views\SEG_INICIO\Details.cshtml" />
+    <Content Include="Views\SEG_INICIO\Edit.cshtml" />
+    <Content Include="Views\SEG_INICIO\Index.cshtml" />
+    <Content Include="Views\SEG_MENSAJE\Create.cshtml" />
+    <Content Include="Views\SEG_MENSAJE\Delete.cshtml" />
+    <Content Include="Views\SEG_MENSAJE\Details.cshtml" />
+    <Content Include="Views\SEG_MENSAJE\Edit.cshtml" />
+    <Content Include="Views\SEG_MENSAJE\Index.cshtml" />
+    <Content Include="Views\SEG_MENU\Create.cshtml" />
+    <Content Include="Views\SEG_MENU\Delete.cshtml" />
+    <Content Include="Views\SEG_MENU\Details.cshtml" />
+    <Content Include="Views\SEG_MENU\Edit.cshtml" />
+    <Content Include="Views\SEG_MENU\Index.cshtml" />
+    <Content Include="Views\SEG_NIVEL_PRECIO\Create.cshtml" />
+    <Content Include="Views\SEG_NIVEL_PRECIO\Delete.cshtml" />
+    <Content Include="Views\SEG_NIVEL_PRECIO\Details.cshtml" />
+    <Content Include="Views\SEG_NIVEL_PRECIO\Edit.cshtml" />
+    <Content Include="Views\SEG_NIVEL_PRECIO\Index.cshtml" />
+    <Content Include="Views\SEG_PROVINCIA\Create.cshtml" />
+    <Content Include="Views\SEG_PROVINCIA\Delete.cshtml" />
+    <Content Include="Views\SEG_PROVINCIA\Details.cshtml" />
+    <Content Include="Views\SEG_PROVINCIA\Edit.cshtml" />
+    <Content Include="Views\SEG_PROVINCIA\Index.cshtml" />
+    <Content Include="Views\SEG_PAIS\Create.cshtml" />
+    <Content Include="Views\SEG_PAIS\Delete.cshtml" />
+    <Content Include="Views\SEG_PAIS\Details.cshtml" />
+    <Content Include="Views\SEG_PAIS\Edit.cshtml" />
+    <Content Include="Views\SEG_PAIS\Index.cshtml" />
+    <Content Include="Views\SEG_PER_CON\Create.cshtml" />
+    <Content Include="Views\SEG_PER_CON\Delete.cshtml" />
+    <Content Include="Views\SEG_PER_CON\Details.cshtml" />
+    <Content Include="Views\SEG_PER_CON\Edit.cshtml" />
+    <Content Include="Views\SEG_PER_CON\Index.cshtml" />
+    <Content Include="Views\SEG_PERFIL_EMP\Create.cshtml" />
+    <Content Include="Views\SEG_PERFIL_EMP\Delete.cshtml" />
+    <Content Include="Views\SEG_PERFIL_EMP\Details.cshtml" />
+    <Content Include="Views\SEG_PERFIL_EMP\Edit.cshtml" />
+    <Content Include="Views\SEG_PERFIL_EMP\Index.cshtml" />
+    <Content Include="Views\SEG_TIPO\Create.cshtml" />
+    <Content Include="Views\SEG_TIPO\Delete.cshtml" />
+    <Content Include="Views\SEG_TIPO\Details.cshtml" />
+    <Content Include="Views\SEG_TIPO\Edit.cshtml" />
+    <Content Include="Views\SEG_TIPO\Index.cshtml" />
+    <Content Include="Views\SEG_USU_GRUPO\Create.cshtml" />
+    <Content Include="Views\SEG_USU_GRUPO\Delete.cshtml" />
+    <Content Include="Views\SEG_USU_GRUPO\Details.cshtml" />
+    <Content Include="Views\SEG_USU_GRUPO\Edit.cshtml" />
+    <Content Include="Views\SEG_USU_GRUPO\Index.cshtml" />
+    <Content Include="Views\SEG_ZONA\Create.cshtml" />
+    <Content Include="Views\SEG_ZONA\Delete.cshtml" />
+    <Content Include="Views\SEG_ZONA\Details.cshtml" />
+    <Content Include="Views\SEG_ZONA\Edit.cshtml" />
+    <Content Include="Views\SEG_ZONA\Index.cshtml" />
+    <Content Include="Views\BCO_BANCOS\Create.cshtml" />
+    <Content Include="Views\BCO_BANCOS\Delete.cshtml" />
+    <Content Include="Views\BCO_BANCOS\Details.cshtml" />
+    <Content Include="Views\BCO_BANCOS\Edit.cshtml" />
+    <Content Include="Views\BCO_BANCOS\Index.cshtml" />
+    <Content Include="Views\BCO_CODIGO_FINANCIERO\Create.cshtml" />
+    <Content Include="Views\BCO_CODIGO_FINANCIERO\Delete.cshtml" />
+    <Content Include="Views\BCO_CODIGO_FINANCIERO\Details.cshtml" />
+    <Content Include="Views\BCO_CODIGO_FINANCIERO\Edit.cshtml" />
+    <Content Include="Views\BCO_CODIGO_FINANCIERO\Index.cshtml" />
+    <Content Include="Views\BCO_CUENTA_BANCOS\Create.cshtml" />
+    <Content Include="Views\BCO_CUENTA_BANCOS\Delete.cshtml" />
+    <Content Include="Views\BCO_CUENTA_BANCOS\Details.cshtml" />
+    <Content Include="Views\BCO_CUENTA_BANCOS\Edit.cshtml" />
+    <Content Include="Views\BCO_CUENTA_BANCOS\Index.cshtml" />
+    <Content Include="Views\BCO_CUENTA_TIPO\Create.cshtml" />
+    <Content Include="Views\BCO_CUENTA_TIPO\Delete.cshtml" />
+    <Content Include="Views\BCO_CUENTA_TIPO\Details.cshtml" />
+    <Content Include="Views\BCO_CUENTA_TIPO\Edit.cshtml" />
+    <Content Include="Views\BCO_CUENTA_TIPO\Index.cshtml" />
+    <Content Include="Views\COM_CAB_DEV\Create.cshtml" />
+    <Content Include="Views\COM_CAB_DEV\Delete.cshtml" />
+    <Content Include="Views\COM_CAB_DEV\Details.cshtml" />
+    <Content Include="Views\COM_CAB_DEV\Edit.cshtml" />
+    <Content Include="Views\COM_CAB_DEV\Index.cshtml" />
+    <Content Include="Views\COM_CAB_ORDEN\Create.cshtml" />
+    <Content Include="Views\COM_CAB_ORDEN\Delete.cshtml" />
+    <Content Include="Views\COM_CAB_ORDEN\Details.cshtml" />
+    <Content Include="Views\COM_CAB_ORDEN\Edit.cshtml" />
+    <Content Include="Views\COM_CAB_ORDEN\Index.cshtml" />
+    <Content Include="Views\COM_CATEGORIA_PROVEEDORES\Create.cshtml" />
+    <Content Include="Views\COM_CATEGORIA_PROVEEDORES\Delete.cshtml" />
+    <Content Include="Views\COM_CATEGORIA_PROVEEDORES\Details.cshtml" />
+    <Content Include="Views\COM_CATEGORIA_PROVEEDORES\Edit.cshtml" />
+    <Content Include="Views\COM_CATEGORIA_PROVEEDORES\Index.cshtml" />
+    <Content Include="Views\COM_DET_DEV\Create.cshtml" />
+    <Content Include="Views\COM_DET_DEV\Delete.cshtml" />
+    <Content Include="Views\COM_DET_DEV\Details.cshtml" />
+    <Content Include="Views\COM_DET_DEV\Edit.cshtml" />
+    <Content Include="Views\COM_DET_DEV\Index.cshtml" />
+    <Content Include="Views\COM_DET_ORDEN\Create.cshtml" />
+    <Content Include="Views\COM_DET_ORDEN\Delete.cshtml" />
+    <Content Include="Views\COM_DET_ORDEN\Details.cshtml" />
+    <Content Include="Views\COM_DET_ORDEN\Edit.cshtml" />
+    <Content Include="Views\COM_DET_ORDEN\Index.cshtml" />
+    <Content Include="Views\COM_PROVEEDOR\Create.cshtml" />
+    <Content Include="Views\COM_PROVEEDOR\Delete.cshtml" />
+    <Content Include="Views\COM_PROVEEDOR\Details.cshtml" />
+    <Content Include="Views\COM_PROVEEDOR\Edit.cshtml" />
+    <Content Include="Views\COM_PROVEEDOR\Index.cshtml" />
+    <Content Include="Views\CON_CENTRO_COSTOS\Create.cshtml" />
+    <Content Include="Views\CON_CENTRO_COSTOS\Delete.cshtml" />
+    <Content Include="Views\CON_CENTRO_COSTOS\Details.cshtml" />
+    <Content Include="Views\CON_CENTRO_COSTOS\Edit.cshtml" />
+    <Content Include="Views\CON_CENTRO_COSTOS\Index.cshtml" />
+    <Content Include="Views\CON_CENTRO_COSTOS_TIPO\Create.cshtml" />
+    <Content Include="Views\CON_CENTRO_COSTOS_TIPO\Delete.cshtml" />
+    <Content Include="Views\CON_CENTRO_COSTOS_TIPO\Details.cshtml" />
+    <Content Include="Views\CON_CENTRO_COSTOS_TIPO\Edit.cshtml" />
+    <Content Include="Views\CON_CENTRO_COSTOS_TIPO\Index.cshtml" />
+    <Content Include="Views\CON_CUENTA_CLASE\Create.cshtml" />
+    <Content Include="Views\CON_CUENTA_CLASE\Delete.cshtml" />
+    <Content Include="Views\CON_CUENTA_CLASE\Details.cshtml" />
+    <Content Include="Views\CON_CUENTA_CLASE\Edit.cshtml" />
+    <Content Include="Views\CON_CUENTA_CLASE\Index.cshtml" />
+    <Content Include="Views\CON_CUENTA_NIVEL\Create.cshtml" />
+    <Content Include="Views\CON_CUENTA_NIVEL\Delete.cshtml" />
+    <Content Include="Views\CON_CUENTA_NIVEL\Details.cshtml" />
+    <Content Include="Views\CON_CUENTA_NIVEL\Edit.cshtml" />
+    <Content Include="Views\CON_CUENTA_NIVEL\Index.cshtml" />
+    <Content Include="Views\CON_CUENTA_PLAN\Create.cshtml" />
+    <Content Include="Views\CON_CUENTA_PLAN\Delete.cshtml" />
+    <Content Include="Views\CON_CUENTA_PLAN\Details.cshtml" />
+    <Content Include="Views\CON_CUENTA_PLAN\Edit.cshtml" />
+    <Content Include="Views\CON_CUENTA_PLAN\Index.cshtml" />
+    <Content Include="Views\CON_CUENTA_TIPO\Create.cshtml" />
+    <Content Include="Views\CON_CUENTA_TIPO\Delete.cshtml" />
+    <Content Include="Views\CON_CUENTA_TIPO\Details.cshtml" />
+    <Content Include="Views\CON_CUENTA_TIPO\Edit.cshtml" />
+    <Content Include="Views\CON_CUENTA_TIPO\Index.cshtml" />
+    <Content Include="Views\CON_DIARIO_AUX\Create.cshtml" />
+    <Content Include="Views\CON_DIARIO_AUX\Delete.cshtml" />
+    <Content Include="Views\CON_DIARIO_AUX\Details.cshtml" />
+    <Content Include="Views\CON_DIARIO_AUX\Edit.cshtml" />
+    <Content Include="Views\CON_DIARIO_AUX\Index.cshtml" />
+    <Content Include="Views\CON_DIARIO_CAB\Create.cshtml" />
+    <Content Include="Views\CON_DIARIO_CAB\Delete.cshtml" />
+    <Content Include="Views\CON_DIARIO_CAB\Details.cshtml" />
+    <Content Include="Views\CON_DIARIO_CAB\Edit.cshtml" />
+    <Content Include="Views\CON_DIARIO_CAB\Index.cshtml" />
+    <Content Include="Views\CON_DIARIO_DET\Create.cshtml" />
+    <Content Include="Views\CON_DIARIO_DET\Delete.cshtml" />
+    <Content Include="Views\CON_DIARIO_DET\Details.cshtml" />
+    <Content Include="Views\CON_DIARIO_DET\Edit.cshtml" />
+    <Content Include="Views\CON_DIARIO_DET\Index.cshtml" />
+    <Content Include="Views\CON_DIARIO_SECUENCIA\Create.cshtml" />
+    <Content Include="Views\CON_DIARIO_SECUENCIA\Delete.cshtml" />
+    <Content Include="Views\CON_DIARIO_SECUENCIA\Details.cshtml" />
+    <Content Include="Views\CON_DIARIO_SECUENCIA\Edit.cshtml" />
+    <Content Include="Views\CON_DIARIO_SECUENCIA\Index.cshtml" />
+    <Content Include="Views\CON_DIARIO_TIPO\Create.cshtml" />
+    <Content Include="Views\CON_DIARIO_TIPO\Delete.cshtml" />
+    <Content Include="Views\CON_DIARIO_TIPO\Details.cshtml" />
+    <Content Include="Views\CON_DIARIO_TIPO\Edit.cshtml" />
+    <Content Include="Views\CON_DIARIO_TIPO\Index.cshtml" />
+    <Content Include="Views\CON_ESTADO_CONTAB\Create.cshtml" />
+    <Content Include="Views\CON_ESTADO_CONTAB\Delete.cshtml" />
+    <Content Include="Views\CON_ESTADO_CONTAB\Details.cshtml" />
+    <Content Include="Views\CON_ESTADO_CONTAB\Edit.cshtml" />
+    <Content Include="Views\CON_ESTADO_CONTAB\Index.cshtml" />
+    <Content Include="Views\CON_DIARIO_AUX_TIPO\Create.cshtml" />
+    <Content Include="Views\CON_DIARIO_AUX_TIPO\Delete.cshtml" />
+    <Content Include="Views\CON_DIARIO_AUX_TIPO\Details.cshtml" />
+    <Content Include="Views\CON_DIARIO_AUX_TIPO\Edit.cshtml" />
+    <Content Include="Views\CON_DIARIO_AUX_TIPO\Index.cshtml" />
+    <Content Include="Views\INV_ARTICULOS\Create.cshtml" />
+    <Content Include="Views\INV_ARTICULOS\Delete.cshtml" />
+    <Content Include="Views\INV_ARTICULOS\Details.cshtml" />
+    <Content Include="Views\INV_ARTICULOS\Edit.cshtml" />
+    <Content Include="Views\INV_ARTICULOS\Index.cshtml" />
+    <Content Include="Views\INV_CAB_KARDEX\Create.cshtml" />
+    <Content Include="Views\INV_CAB_KARDEX\Delete.cshtml" />
+    <Content Include="Views\INV_CAB_KARDEX\Details.cshtml" />
+    <Content Include="Views\INV_CAB_KARDEX\Edit.cshtml" />
+    <Content Include="Views\INV_CAB_KARDEX\Index.cshtml" />
+    <Content Include="Views\INV_CAB_MOVIMIENTO\Create.cshtml" />
+    <Content Include="Views\INV_CAB_MOVIMIENTO\Delete.cshtml" />
+    <Content Include="Views\INV_CAB_MOVIMIENTO\Details.cshtml" />
+    <Content Include="Views\INV_CAB_MOVIMIENTO\Edit.cshtml" />
+    <Content Include="Views\INV_CAB_MOVIMIENTO\Index.cshtml" />
+    <Content Include="Views\INV_CAB_SOLICITUD\Create.cshtml" />
+    <Content Include="Views\INV_CAB_SOLICITUD\Delete.cshtml" />
+    <Content Include="Views\INV_CAB_SOLICITUD\Details.cshtml" />
+    <Content Include="Views\INV_CAB_SOLICITUD\Edit.cshtml" />
+    <Content Include="Views\INV_CAB_SOLICITUD\Index.cshtml" />
+    <Content Include="Views\INV_CATEGORIA\Create.cshtml" />
+    <Content Include="Views\INV_CATEGORIA\Delete.cshtml" />
+    <Content Include="Views\INV_CATEGORIA\Details.cshtml" />
+    <Content Include="Views\INV_CATEGORIA\Edit.cshtml" />
+    <Content Include="Views\INV_CATEGORIA\Index.cshtml" />
+    <Content Include="Views\INV_DET_KARDEX\Create.cshtml" />
+    <Content Include="Views\INV_DET_KARDEX\Delete.cshtml" />
+    <Content Include="Views\INV_DET_KARDEX\Details.cshtml" />
+    <Content Include="Views\INV_DET_KARDEX\Edit.cshtml" />
+    <Content Include="Views\INV_DET_KARDEX\Index.cshtml" />
+    <Content Include="Views\INV_DET_MOVIMIENTO\Create.cshtml" />
+    <Content Include="Views\INV_DET_MOVIMIENTO\Delete.cshtml" />
+    <Content Include="Views\INV_DET_MOVIMIENTO\Details.cshtml" />
+    <Content Include="Views\INV_DET_MOVIMIENTO\Edit.cshtml" />
+    <Content Include="Views\INV_DET_MOVIMIENTO\Index.cshtml" />
+    <Content Include="Views\INV_DET_SOLICITUD\Create.cshtml" />
+    <Content Include="Views\INV_DET_SOLICITUD\Delete.cshtml" />
+    <Content Include="Views\INV_DET_SOLICITUD\Details.cshtml" />
+    <Content Include="Views\INV_DET_SOLICITUD\Edit.cshtml" />
+    <Content Include="Views\INV_DET_SOLICITUD\Index.cshtml" />
+    <Content Include="Views\INV_MARCA\Create.cshtml" />
+    <Content Include="Views\INV_MARCA\Delete.cshtml" />
+    <Content Include="Views\INV_MARCA\Details.cshtml" />
+    <Content Include="Views\INV_MARCA\Edit.cshtml" />
+    <Content Include="Views\INV_MARCA\Index.cshtml" />
+    <Content Include="Views\INV_SUBTIPO\Create.cshtml" />
+    <Content Include="Views\INV_SUBTIPO\Delete.cshtml" />
+    <Content Include="Views\INV_SUBTIPO\Details.cshtml" />
+    <Content Include="Views\INV_SUBTIPO\Edit.cshtml" />
+    <Content Include="Views\INV_SUBTIPO\Index.cshtml" />
+    <Content Include="Views\INV_TIPO_ARTICULO\Create.cshtml" />
+    <Content Include="Views\INV_TIPO_ARTICULO\Delete.cshtml" />
+    <Content Include="Views\INV_TIPO_ARTICULO\Details.cshtml" />
+    <Content Include="Views\INV_TIPO_ARTICULO\Edit.cshtml" />
+    <Content Include="Views\INV_TIPO_ARTICULO\Index.cshtml" />
+    <Content Include="Views\INV_TIPSUBART\Create.cshtml" />
+    <Content Include="Views\INV_TIPSUBART\Delete.cshtml" />
+    <Content Include="Views\INV_TIPSUBART\Details.cshtml" />
+    <Content Include="Views\INV_TIPSUBART\Edit.cshtml" />
+    <Content Include="Views\INV_TIPSUBART\Index.cshtml" />
+    <Content Include="Views\GEN_ANIO\Create.cshtml" />
+    <Content Include="Views\GEN_ANIO\Delete.cshtml" />
+    <Content Include="Views\GEN_ANIO\Details.cshtml" />
+    <Content Include="Views\GEN_ANIO\Edit.cshtml" />
+    <Content Include="Views\GEN_ANIO\Index.cshtml" />
+    <Content Include="Views\GEN_MES\Create.cshtml" />
+    <Content Include="Views\GEN_MES\Delete.cshtml" />
+    <Content Include="Views\GEN_MES\Details.cshtml" />
+    <Content Include="Views\GEN_MES\Edit.cshtml" />
+    <Content Include="Views\GEN_MES\Index.cshtml" />
+    <Content Include="Views\GEN_PRM_DISCAPCIDA_TIPO\Create.cshtml" />
+    <Content Include="Views\GEN_PRM_DISCAPCIDA_TIPO\Delete.cshtml" />
+    <Content Include="Views\GEN_PRM_DISCAPCIDA_TIPO\Details.cshtml" />
+    <Content Include="Views\GEN_PRM_DISCAPCIDA_TIPO\Edit.cshtml" />
+    <Content Include="Views\GEN_PRM_DISCAPCIDA_TIPO\Index.cshtml" />
+    <Content Include="Views\GEN_PRM_EDUCACION_NIVEL\Create.cshtml" />
+    <Content Include="Views\GEN_PRM_EDUCACION_NIVEL\Delete.cshtml" />
+    <Content Include="Views\GEN_PRM_EDUCACION_NIVEL\Details.cshtml" />
+    <Content Include="Views\GEN_PRM_EDUCACION_NIVEL\Edit.cshtml" />
+    <Content Include="Views\GEN_PRM_EDUCACION_NIVEL\Index.cshtml" />
+    <Content Include="Views\GEN_PRM_ESTADO_CIVL\Create.cshtml" />
+    <Content Include="Views\GEN_PRM_ESTADO_CIVL\Delete.cshtml" />
+    <Content Include="Views\GEN_PRM_ESTADO_CIVL\Details.cshtml" />
+    <Content Include="Views\GEN_PRM_ESTADO_CIVL\Edit.cshtml" />
+    <Content Include="Views\GEN_PRM_ESTADO_CIVL\Index.cshtml" />
+    <Content Include="Views\GEN_PRM_FORMA_PAGO\Create.cshtml" />
+    <Content Include="Views\GEN_PRM_FORMA_PAGO\Delete.cshtml" />
+    <Content Include="Views\GEN_PRM_FORMA_PAGO\Details.cshtml" />
+    <Content Include="Views\GEN_PRM_FORMA_PAGO\Edit.cshtml" />
+    <Content Include="Views\GEN_PRM_FORMA_PAGO\Index.cshtml" />
+    <Content Include="Views\GEN_PRM_GEOA_PAISES\Create.cshtml" />
+    <Content Include="Views\GEN_PRM_GEOA_PAISES\Delete.cshtml" />
+    <Content Include="Views\GEN_PRM_GEOA_PAISES\Details.cshtml" />
+    <Content Include="Views\GEN_PRM_GEOA_PAISES\Edit.cshtml" />
+    <Content Include="Views\GEN_PRM_GEOA_PAISES\Index.cshtml" />
+    <Content Include="Views\GEN_TIPO_IDENTIFICACION\Create.cshtml" />
+    <Content Include="Views\GEN_TIPO_IDENTIFICACION\Delete.cshtml" />
+    <Content Include="Views\GEN_TIPO_IDENTIFICACION\Details.cshtml" />
+    <Content Include="Views\GEN_TIPO_IDENTIFICACION\Edit.cshtml" />
+    <Content Include="Views\GEN_TIPO_IDENTIFICACION\Index.cshtml" />
+    <Content Include="Views\GEN_PRM_SEXO\Create.cshtml" />
+    <Content Include="Views\GEN_PRM_SEXO\Delete.cshtml" />
+    <Content Include="Views\GEN_PRM_SEXO\Details.cshtml" />
+    <Content Include="Views\GEN_PRM_SEXO\Edit.cshtml" />
+    <Content Include="Views\GEN_PRM_SEXO\Index.cshtml" />
+    <Content Include="Views\GEN_PRM_PARENTESCO\Create.cshtml" />
+    <Content Include="Views\GEN_PRM_PARENTESCO\Delete.cshtml" />
+    <Content Include="Views\GEN_PRM_PARENTESCO\Details.cshtml" />
+    <Content Include="Views\GEN_PRM_PARENTESCO\Edit.cshtml" />
+    <Content Include="Views\GEN_PRM_PARENTESCO\Index.cshtml" />
+    <Content Include="Views\GEN_PRM_OPERADORA_MOVIL\Create.cshtml" />
+    <Content Include="Views\GEN_PRM_OPERADORA_MOVIL\Delete.cshtml" />
+    <Content Include="Views\GEN_PRM_OPERADORA_MOVIL\Details.cshtml" />
+    <Content Include="Views\GEN_PRM_OPERADORA_MOVIL\Edit.cshtml" />
+    <Content Include="Views\GEN_PRM_OPERADORA_MOVIL\Index.cshtml" />
+    <Content Include="Views\GEN_PRM_GEOE_PROVINCIAS\Create.cshtml" />
+    <Content Include="Views\GEN_PRM_GEOE_PROVINCIAS\Delete.cshtml" />
+    <Content Include="Views\GEN_PRM_GEOE_PROVINCIAS\Details.cshtml" />
+    <Content Include="Views\GEN_PRM_GEOE_PROVINCIAS\Edit.cshtml" />
+    <Content Include="Views\GEN_PRM_GEOE_PROVINCIAS\Index.cshtml" />
+    <Content Include="Views\GEN_PRM_GEOO_PARROQUIAS\Create.cshtml" />
+    <Content Include="Views\GEN_PRM_GEOO_PARROQUIAS\Delete.cshtml" />
+    <Content Include="Views\GEN_PRM_GEOO_PARROQUIAS\Details.cshtml" />
+    <Content Include="Views\GEN_PRM_GEOO_PARROQUIAS\Edit.cshtml" />
+    <Content Include="Views\GEN_PRM_GEOO_PARROQUIAS\Index.cshtml" />
+    <Content Include="Views\GEN_PRM_GEOI_CIUDAD\Create.cshtml" />
+    <Content Include="Views\GEN_PRM_GEOI_CIUDAD\Delete.cshtml" />
+    <Content Include="Views\GEN_PRM_GEOI_CIUDAD\Details.cshtml" />
+    <Content Include="Views\GEN_PRM_GEOI_CIUDAD\Edit.cshtml" />
+    <Content Include="Views\GEN_PRM_GEOI_CIUDAD\Index.cshtml" />
+    <Content Include="Views\NOM_EMPLEADO_TIPO\Create.cshtml" />
+    <Content Include="Views\NOM_EMPLEADO_TIPO\Delete.cshtml" />
+    <Content Include="Views\NOM_EMPLEADO_TIPO\Details.cshtml" />
+    <Content Include="Views\NOM_EMPLEADO_TIPO\Edit.cshtml" />
+    <Content Include="Views\NOM_EMPLEADO_TIPO\Index.cshtml" />
+    <Content Include="Views\NOM_EMPLEADOS\Create.cshtml" />
+    <Content Include="Views\NOM_EMPLEADOS\Delete.cshtml" />
+    <Content Include="Views\NOM_EMPLEADOS\Details.cshtml" />
+    <Content Include="Views\NOM_EMPLEADOS\Edit.cshtml" />
+    <Content Include="Views\NOM_EMPLEADOS\Index.cshtml" />
+    <Content Include="Views\NOM_VENDEDOR_TIPO\Create.cshtml" />
+    <Content Include="Views\NOM_VENDEDOR_TIPO\Delete.cshtml" />
+    <Content Include="Views\NOM_VENDEDOR_TIPO\Details.cshtml" />
+    <Content Include="Views\NOM_VENDEDOR_TIPO\Edit.cshtml" />
+    <Content Include="Views\NOM_VENDEDOR_TIPO\Index.cshtml" />
+    <Content Include="Views\NOM_VENDEDORES\Create.cshtml" />
+    <Content Include="Views\NOM_VENDEDORES\Delete.cshtml" />
+    <Content Include="Views\NOM_VENDEDORES\Details.cshtml" />
+    <Content Include="Views\NOM_VENDEDORES\Edit.cshtml" />
+    <Content Include="Views\NOM_VENDEDORES\Index.cshtml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="App_Data\" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="packages.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Service Include="{508349B6-6B84-4DF5-91F0-309BEEBAD82D}" />
+  </ItemGroup>
+  <PropertyGroup>
+    <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
+    <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>
+  </PropertyGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <Import Project="$(VSToolsPath)\WebApplications\Microsoft.WebApplication.targets" Condition="'$(VSToolsPath)' != ''" />
+  <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v10.0\WebApplications\Microsoft.WebApplication.targets" Condition="false" />
+  <Target Name="MvcBuildViews" AfterTargets="AfterBuild" Condition="'$(MvcBuildViews)'=='true'">
+    <AspNetCompiler VirtualPath="temp" PhysicalPath="$(WebProjectOutputDir)" />
+  </Target>
+  <ProjectExtensions>
+    <VisualStudio>
+      <FlavorProperties GUID="{349c5851-65df-11da-9384-00065b846f21}">
+        <WebProjectProperties>
+          <UseIIS>True</UseIIS>
+          <AutoAssignPort>True</AutoAssignPort>
+          <DevelopmentServerPort>50312</DevelopmentServerPort>
+          <DevelopmentServerVPath>/</DevelopmentServerVPath>
+          <IISUrl>https://localhost:44318/</IISUrl>
+          <NTLMAuthentication>False</NTLMAuthentication>
+          <UseCustomServer>False</UseCustomServer>
+          <CustomServerUrl>
+          </CustomServerUrl>
+          <SaveServerSettingsInUserFile>False</SaveServerSettingsInUserFile>
+        </WebProjectProperties>
+      </FlavorProperties>
+    </VisualStudio>
+  </ProjectExtensions>
+  <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">
+    <PropertyGroup>
+      <ErrorText>Este proyecto hace referencia a los paquetes NuGet que faltan en este equipo. Use la restauración de paquetes NuGet para descargarlos. Para obtener más información, consulte http://go.microsoft.com/fwlink/?LinkID=322105. El archivo que falta es {0}.</ErrorText>
+    </PropertyGroup>
+    <Error Condition="!Exists('..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.1\build\net46\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.1\build\net46\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props'))" />
+    <Error Condition="!Exists('..\packages\EntityFramework.6.4.4\build\EntityFramework.props')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\EntityFramework.6.4.4\build\EntityFramework.props'))" />
+    <Error Condition="!Exists('..\packages\EntityFramework.6.4.4\build\EntityFramework.targets')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\EntityFramework.6.4.4\build\EntityFramework.targets'))" />
+  </Target>
+  <Import Project="..\packages\EntityFramework.6.4.4\build\EntityFramework.targets" Condition="Exists('..\packages\EntityFramework.6.4.4\build\EntityFramework.targets')" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it.
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target> -->
+</Project>

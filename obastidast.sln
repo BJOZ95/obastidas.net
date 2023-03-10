@@ -1,0 +1,25 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.32630.194
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "obastidast", "obastidast\obastidast.csproj", "{B98E1C98-EA73-4812-99C1-997F7D2D48CD}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{B98E1C98-EA73-4812-99C1-997F7D2D48CD}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B98E1C98-EA73-4812-99C1-997F7D2D48CD}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B98E1C98-EA73-4812-99C1-997F7D2D48CD}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B98E1C98-EA73-4812-99C1-997F7D2D48CD}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {834E6827-C287-4C62-B0DD-AA295B5B87E3}
+	EndGlobalSection
+EndGlobal
